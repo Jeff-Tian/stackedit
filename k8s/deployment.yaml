@@ -28,18 +28,18 @@ spec:
         deployedBy: deploy-node-app
     spec:
       containers:
-        - image: 'jefftian/stackedit'
+        - image: 'jefftian/stackedit:latest'
           imagePullPolicy: Always
           name: stack
           env:
             - name: GET_HOSTS_FROM
               value: dns
-            - name: githubClientId
+            - name: GITHUB_CLIENT_ID
               valueFrom:
                 secretKeyRef:
                   name: stack-secrets
                   key: githubClientId
-            - name: githubClientSecret
+            - name: GITHUB_CLIENT_SECRET
               valueFrom:
                 secretKeyRef:
                   name: stack-secrets
@@ -55,6 +55,3 @@ spec:
             requests:
               cpu: 3m
               memory: 64Mi
-          command:
-            - node
-            - dist/main.js
