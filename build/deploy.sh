@@ -20,5 +20,5 @@ helm repo index --url https://jefftian.github.io/stackedit-charts/ .
 git config user.name "Jeff Tian"
 git config user.email "jeff.tian@outlook.com"
 git add .
-git commit --author "Jeff Tian <Jeff.Tian@outlook.com>" -m "Added $TRAVIS_TAG"
+git commit --allow-empty --author "Jeff Tian <Jeff.Tian@outlook.com>" -m "Added $TRAVIS_TAG"
 git push origin master
