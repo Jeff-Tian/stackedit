@@ -1,4 +1,4 @@
-FROM benweet/stackedit-base
+FROM jefftian/stackedit-base
 
 RUN mkdir -p /opt/stackedit/stackedit_v4
 WORKDIR /opt/stackedit/stackedit_v4
