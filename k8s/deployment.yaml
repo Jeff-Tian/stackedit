@@ -28,7 +28,7 @@ spec:
         deployedBy: deploy-node-app
     spec:
       containers:
-        - image: 'jefftian/stackedit:latest'
+        - image: 'jefftian/stackedit'
           imagePullPolicy: Always
           name: stack
           env:
