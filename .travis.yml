@@ -7,6 +7,7 @@ services:
   - docker
 
 before_deploy:
+  - npm run build
   # Run docker build
   - docker build -t jefftian/stackedit .
   # Install Helm
